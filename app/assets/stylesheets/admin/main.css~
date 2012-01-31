@@ -1,0 +1,62 @@
+body{
+  font: 15px/1 sans-serif;
+  background-color:#AD8230 ;
+}
+
+div{
+  display:inline;
+}
+
+a{
+  text-decoration:none;
+}
+
+a:visited{
+  color:blue
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.edit a{
+  
+}
+
+.edit a:visited{
+  color:blue;
+}
+
+.edit a:hover{
+  text-decoration:underline;
+}
+
+.edit a:active{
+  color:#111;
+}
+
+.delete a{
+  text-decoration: none;
+  color: #b10;
+}
+
+.delete a:hover{
+  text-decoration: none;
+  color: #f10;
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+
+.field_with_errors .message {
+  color: #d00;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+#debug_params{
+  font: 12px/1 verdana;
+  color: #7F7F7F
+}

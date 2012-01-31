@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  id_writer: 1
+  id_publisher: 1
+  id_category: 1
+  id_subcategory: 1
+  published_year: 
+  quantity: 1
+
+two:
+  name: MyString
+  id_writer: 1
+  id_publisher: 1
+  id_category: 1
+  id_subcategory: 1
+  published_year: 
+  quantity: 1

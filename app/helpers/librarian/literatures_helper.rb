@@ -1,0 +1,2 @@
+module Librarian::LiteraturesHelper
+end

@@ -1,0 +1,5 @@
+class Homes_Controller < ActionController::Base
+  def index
+    
+  end
+end

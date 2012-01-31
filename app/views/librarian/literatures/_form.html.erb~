@@ -1,0 +1,34 @@
+<%= nested_form_for([:librarian,@literature], :validate => true) do |f| %>
+  
+    
+  <%= f.label :name %>
+    
+  <%= f.text_field :name %><br />
+  
+  <%= f.label :writer %>
+  
+  <%= collection_select(:writing ,:writer_id, @writers, :id, :name) %><br />
+  
+  <%= f.label :publisher %>
+  
+  <%= collection_select(:literature, :publisher_id, @publishers, :id, :name) %><br />
+  
+  <%= f.label :category %>
+  
+  <%= collection_select(:literature, :category_id, @categories, :id, :name) %><br />
+  
+  <%= f.label :subcategory %>
+  
+  <%= collection_select(:literature, :subcategory_id, @subcategories, :id, :name) %><br />
+  
+  <%= f.label :published_year %>
+    
+  <%= f.text_field :published_year %><br />
+  
+  <%= f.label :quantity %>
+    
+  <%= f.text_field :quantity %><br />
+  
+  <%= f.submit %>
+  
+<% end %>

@@ -1,0 +1,40 @@
+<% content_for :head do %>
+  <h3>Pustaka</h3>
+  <span id="header_desc">daftar pustaka</span>
+<% end %>
+
+<%= paginate @literatures %>
+
+<table>
+  <tr>
+    <td>Id</td>
+    <td>Judul</td>
+    <td>Penulis</td>
+    <td>Penerbit</td>
+    <td>Kategori</td>
+    <td>Subkategori</td>
+    <td>Tahun Terbit</td>
+    <td>Jumlah</td>
+    <td></td>
+  </tr>
+
+<% @literatures.each do |l| %>
+
+  <tr>
+    <td><%= l.id %></td>
+    <td><%= link_to l.name, edit_librarian_literature_path(l) %></td>
+    <td><%= l.writers.first.name %></td>
+    <td><%= l.publisher.name %></td>
+    <td><%= l.category.name %></td>
+    <td><%= l.subcategory.name %></td>
+    <td><%= l.published_year %></td>
+    <td><%= l.quantity %></td>
+    <td><span class="delete">
+      <%= link_to "delete", librarian_literature_path(p), :confirm=>"delete?", :method=>"delete"  %>
+    </span></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<%= link_to "tambah pustaka", new_librarian_literature_path %>
+

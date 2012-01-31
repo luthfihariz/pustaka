@@ -1,0 +1,4 @@
+<h1>Writers#new</h1>
+
+<%= render 'form' %>
+<%= link_to 'back', librarian_writers_path %>

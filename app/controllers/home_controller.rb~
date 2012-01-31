@@ -1,0 +1,8 @@
+class HomesController < ActiveController::Base
+  
+  def index
+
+    
+  end
+  
+end

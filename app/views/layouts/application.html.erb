@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %></title>
+  <%= stylesheet_link_tag     "admin/layout", "admin/style" %>
+  <%= javascript_include_tag "jquery", "rails.validations.js", "nested_form.js" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="main">
+    <div class="leftheader">
+      <h2>Librarian</h2>
+    </div>
+    <div class="header">
+      <%= yield :head %>
+    </div>
+    
+    <div class="container">
+      <div class="leftcol">
+        <ul class="nav">
+          <%= render 'templates/leftcol' %>
+        </ul>
+      </div>
+    
+      <div class="content"> 
+        <div class="yield"><%= yield %></div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="footer_left"></div>
+      <div class="footer_right">Footer</div>
+    </div>
+  </div>
+
+</body>
+</html>

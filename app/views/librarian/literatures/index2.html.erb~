@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <td>Id</td>
+    <td>Judul</td>
+    <td>Penulis</td>
+    <td>Penerbit</td>
+    <td>Kategori</td>
+    <td>Subkategori</td>
+    <td>Tahun Terbit</td>
+    <td>Jumlah</td>
+  </tr>
+
+<% @literatures.each do |l| %>
+
+  <tr>
+    <td><%= l.id %></td>
+    <td><%= l.name %></td>
+    <td><%= l.writer.name %></td>
+    <td><%= l.publisher.name %></td>
+    <td><%= l.category.name %></td>
+    <td><%= l.subcategory.name %></td>
+    <td><%= l.published_year %></td>
+    <td><%= l.quantity %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<%= link_to "tambah pustaka", new_librarian_literature_path %>

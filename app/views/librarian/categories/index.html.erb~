@@ -1,0 +1,27 @@
+<% content_for :head do %>
+  <h3>Kategori</h3>
+  <span id="header_desc">daftar kategori</span>
+<% end %>
+
+<%= paginate @categories %>
+
+<table>
+  
+<% @categories.each do |c| %>
+
+  <p>
+    <%= c.id %>
+    <span class="edit">
+      <%= link_to c.name, edit_librarian_category_path(c) %>
+    </span>
+    
+    <span class="delete">
+      <%= link_to "delete", librarian_literature_path(l), :confirm=>"delete?", :method=>"delete"  %>
+    </span>
+    
+  </p>
+  
+<% end %>
+</table>
+
+<%= link_to "new category", new_librarian_category_path %>
