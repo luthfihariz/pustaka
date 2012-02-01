@@ -1,2 +1,0 @@
-<%= link_to  "home", librarian_url %>
-<%= link_to  "literatures", librarian_literatures_path %>

@@ -1,6 +1,0 @@
-class Writing < ActiveRecord::Base
-  attr_accessible :literature_id, :writer_id  
-  
-  belongs_to :literature
-  belongs_to :writer
-end

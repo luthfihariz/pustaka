@@ -3,7 +3,7 @@ class Librarian::PublishersController < ApplicationController
   
   def index
     @title = "Publisher"
-    @publishers = Publisher.order(:created_at).page(params[:page]).per(3)
+    @publishers = Publisher.order(:created_at).page(params[:page]).per(7)
   end
 
   def new

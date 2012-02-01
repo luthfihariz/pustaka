@@ -3,7 +3,7 @@ class Librarian::SubcategoriesController < ApplicationController
   
   def index
     @title = "Subcategory"
-    @subcategories = Subcategory.order(:created_at).page(params[:page]).per(3)
+    @subcategories = Subcategory.order(:created_at).page(params[:page]).per(7)
   end
 
   def new

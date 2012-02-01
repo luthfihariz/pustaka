@@ -3,7 +3,7 @@ class Librarian::CategoriesController < ApplicationController
 
   def index
     @title = "Category"
-    @categories = Category.order(:created_at).page(params[:page]).per(3)
+    @categories = Category.order(:created_at).page(params[:page]).per(7)
   end
 
   def new
